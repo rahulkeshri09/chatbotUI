@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.chatbot-logo{
+  height:100px;
+  width: 100px;
+  cursor: pointer;
+}
+.chatbot-logo-position{
+  position: absolute;
+  top:60%;
+  left:82%;
+  margin-right: 40px;
+}
+/******* chat off button ********/
+.chatbot-deactivevate{
+  position: absolute;
+  top:90%;
+  left:-15%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+/******** container of chatbot **********/
+.chatbot-container{
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  height: 90%;
+  width: 30%;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+/********* chatbot intro container ********/
+#chatbot-intro{
+  height:50%;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  animation-name: chatbot-intro-container;
+  animation-duration:3s;
+  transition: ease;
+  animation-fill-mode: forwards;
+}
+#intro{
+  padding-left: 60px;
+  padding-right: 25px;
+  font-weight: 600;
+  color:whitesmoke;
+  opacity: 0;
+  transition: 2s ease;
+}
+/******** animation of background color of chatbot intro container ***********/ 
+@keyframes chatbot-intro-container{
+  from{background-color: white;}
+  to{background-color:#f58142 ;}
+}
+/******** faq container**********/
+#faq-container{
+  height: 60%;
+  width: 90%;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  position: absolute;
+  top:35%;
+  left:5%;
+  background-color:white;
+  opacity: 0;
+}
+/****** robot logo *********/
+#robot{
+  opacity: 0;
+  transition: 2s ease;
+}
+/****** robot logo *********/
+#robot2{
+  opacity: 0;
+  transition: 2s ease;
+}
+.faq-ques{
+  display: flex;
+  flex-direction: column;
+  margin-top: -10px;
+}
+/***** container of questions of faq **********/
+.qns{
+  font-size: 13px;
+  border: 1px solid lightgray;
+  color: gray;
+  margin-right: 20px;
+  margin-left: 25px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: 2s ease;
+  opacity: 0;
+}
+ul {
+  list-style: none;
+}
+/***** bullet of question ********/
+ul li::before{
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  font-size: 24px;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+/******** start new conversation button **********/
+#new-conversation-btn{
+  width:60%;
+  margin: auto;
+  margin-top: 20px;
+  border: 1px solid lightgray;
+  box-shadow:1px 2px lightgray;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color:#667063;
+  cursor: pointer;
+  text-align: center;
+  opacity: 0;
+  transition: 3s ease;
+}
